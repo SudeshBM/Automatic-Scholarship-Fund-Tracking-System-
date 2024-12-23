@@ -1,0 +1,17 @@
+# Ignore environment files
+.env
+
+# Ignore logs
+*.log
+
+# Ignore node_modules (if using Node.js)
+node_modules/
+
+# Ignore temporary system files
+.DS_Store
+Thumbs.db
+
+# Ignore sensitive files
+secret_config.json
+*.key
+*.config
