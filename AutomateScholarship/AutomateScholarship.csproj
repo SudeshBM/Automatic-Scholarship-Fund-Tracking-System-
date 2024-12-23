@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C397494-6BED-45DA-AC50-8545791EEEA1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutomateScholarship</RootNamespace>
+    <AssemblyName>AutomateScholarship</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.S3, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\AWSSDK.S3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.8.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="SMS_LIB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SMSDLL\SMS_LIB.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddDonorWallet.aspx" />
+    <Content Include="AddRecipientEducation.aspx" />
+    <Content Include="AddScholarshipAmount.aspx" />
+    <Content Include="AdminViewNGOScholarship.aspx" />
+    <Content Include="AMHome.aspx" />
+    <Content Include="ApplyScholarship.aspx" />
+    <Content Include="ApproveNGORegistration.aspx" />
+    <Content Include="ApproveScholarship.aspx" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style_css.css" />
+    <Content Include="css_css\atlas.css" />
+    <Content Include="css_css\bootstrap.min.css" />
+    <Content Include="css_css\clndr.css" />
+    <Content Include="css_css\fabochart.css" />
+    <Content Include="css_css\flexslider.css" />
+    <Content Include="css_css\font-awesome.css" />
+    <Content Include="css_css\graph.css" />
+    <Content Include="css_css\icon-font.min.css" />
+    <Content Include="css_css\owl.carousel.css" />
+    <Content Include="css_css\style.css" />
+    <Content Include="DLL\AWSSDK.Core.dll" />
+    <Content Include="DLL\AWSSDK.S3.dll" />
+    <Content Include="DLL\MySql.Data.dll" />
+    <Content Include="DLL\zxing.dll" />
+    <Content Include="DLL\zxing.presentation.dll" />
+    <Content Include="DonorHome.aspx" />
+    <Content Include="DonorPayNGO.aspx" />
+    <Content Include="DonorRegistration.aspx" />
+    <Content Include="DonorViewScholarShip.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="GovtPayNGO.aspx" />
+    <Content Include="images\11.jpg" />
+    <Content Include="images\8.jpg" />
+    <Content Include="images\ab.png" />
+    <Content Include="images\b1.jpg" />
+    <Content Include="images\b2.jpg" />
+    <Content Include="images\b3.jpg" />
+    <Content Include="images\b4.jpg" />
+    <Content Include="images\b5.jpg" />
+    <Content Include="images\b6.jpg" />
+    <Content Include="images\b7.jpg" />
+    <Content Include="images\b8.jpg" />
+    <Content Include="images\b9.jpg" />
+    <Content Include="images\bag.png" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\banner1.jpg" />
+    <Content Include="images\banner2.jpg" />
+    <Content Include="images\banner3.jpg" />
+    <Content Include="images\banner4.jpg" />
+    <Content Include="images\candidate.jpg" />
+    <Content Include="images\closew.gif" />
+    <Content Include="images\close_1.png" />
+    <Content Include="images\contact.jpg" />
+    <Content Include="images\cross.png" />
+    <Content Include="images\d1.jpg" />
+    <Content Include="images\d2.jpg" />
+    <Content Include="images\d3.jpg" />
+    <Content Include="images\d4.jpg" />
+    <Content Include="images\e1.jpg" />
+    <Content Include="images\e2.jpg" />
+    <Content Include="images\e3.jpg" />
+    <Content Include="images\e4.jpg" />
+    <Content Include="images\e5.jpg" />
+    <Content Include="images\e6.jpg" />
+    <Content Include="images\g1.jpg" />
+    <Content Include="images\g2.jpg" />
+    <Content Include="images\g3.jpg" />
+    <Content Include="images\g4.jpg" />
+    <Content Include="images\g5.jpg" />
+    <Content Include="images\g6.jpg" />
+    <Content Include="images\grid.png" />
+    <Content Include="images\icons.png" />
+    <Content Include="images\icon_sprite.png" />
+    <Content Include="images\img-sprite.png" />
+    <Content Include="images\leftw.gif" />
+    <Content Include="images\loc1.jpg" />
+    <Content Include="images\loc2.jpg" />
+    <Content Include="images\loc3.jpg" />
+    <Content Include="images\loc4.jpg" />
+    <Content Include="images\loc5.jpg" />
+    <Content Include="images\loc6.jpg" />
+    <Content Include="images\loc7.jpg" />
+    <Content Include="images\loc8.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\mid.jpg" />
+    <Content Include="images\na.jpg" />
+    <Content Include="images\na1.jpg" />
+    <Content Include="images\na2.jpg" />
+    <Content Include="images\pf1.jpg" />
+    <Content Include="images\pf2.jpg" />
+    <Content Include="images\pf3.jpg" />
+    <Content Include="images\pf4.jpg" />
+    <Content Include="images\phon.png" />
+    <Content Include="images\process.jpg" />
+    <Content Include="images\rightw.gif" />
+    <Content Include="images\right_arrow.png" />
+    <Content Include="images\s1.jpg" />
+    <Content Include="images\s2.jpg" />
+    <Content Include="images\s3.jpg" />
+    <Content Include="images\s4.jpg" />
+    <Content Include="images\s5.jpg" />
+    <Content Include="images\s6.jpg" />
+    <Content Include="images\s7.jpg" />
+    <Content Include="images\s8.jpg" />
+    <Content Include="images\s9.jpg" />
+    <Content Include="images\search.png" />
+    <Content Include="images\sh1.jpg" />
+    <Content Include="images\sh2.jpg" />
+    <Content Include="images\sh3.jpg" />
+    <Content Include="images\sh4.jpg" />
+    <Content Include="images\sh5.jpg" />
+    <Content Include="images\sh6.jpg" />
+    <Content Include="images\single.jpg" />
+    <Content Include="images\slider_handle.png" />
+    <Content Include="images\t1.jpg" />
+    <Content Include="images\t4.jpg" />
+    <Content Include="images\team.jpg" />
+    <Content Include="images\test1.jpg" />
+    <Content Include="images\test2.jpg" />
+    <Content Include="images\test3.jpg" />
+    <Content Include="images\tick.png" />
+    <Content Include="images\tick1.png" />
+    <Content Include="images\tw.png" />
+    <Content Include="images\w1.jpg" />
+    <Content Include="images\w10.jpg" />
+    <Content Include="images\w11.jpg" />
+    <Content Include="images\w12.jpg" />
+    <Content Include="images\w2.jpg" />
+    <Content Include="images\w3.jpg" />
+    <Content Include="images\w4.jpg" />
+    <Content Include="images\w5.jpg" />
+    <Content Include="images\w6.jpg" />
+    <Content Include="images\w7.jpg" />
+    <Content Include="images\w8.jpg" />
+    <Content Include="images\w9.jpg" />
+    <Content Include="images\wh2.jpg" />
+    <Content Include="images\wh3.jpg" />
+    <Content Include="images\wh4.jpg" />
+    <Content Include="images\wh5.jpg" />
+    <Content Include="images\wh6.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\jquery-2.1.4.min.js" />
+    <Content Include="js_js\amcharts.js" />
+    <Content Include="js_js\bootstrap.min.js" />
+    <Content Include="js_js\cbpFWTabs.js" />
+    <Content Include="js_js\Chart.js" />
+    <Content Include="js_js\clndr.js" />
+    <Content Include="js_js\imagezoom.js" />
+    <Content Include="js_js\jquery-1.10.2.min.js" />
+    <Content Include="js_js\jquery.flexslider.js" />
+    <Content Include="js_js\jquery.flot.js" />
+    <Content Include="js_js\jquery.fn.gantt.js" />
+    <Content Include="js_js\jquery.nicescroll.js" />
+    <Content Include="js_js\light.js" />
+    <Content Include="js_js\menu_jquery.js" />
+    <Content Include="js_js\moment-2.2.1.js" />
+    <Content Include="js_js\owl.carousel.js" />
+    <Content Include="js_js\pie-chart.js" />
+    <Content Include="js_js\scripts.js" />
+    <Content Include="js_js\serial.js" />
+    <Content Include="js_js\simpleCart.min.js" />
+    <Content Include="js_js\site.js" />
+    <Content Include="js_js\underscore-min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="NGOHome.aspx" />
+    <Content Include="NGORegistration.aspx" />
+    <Content Include="NGOScholarship.aspx" />
+    <Content Include="NGOViewRScholarship.aspx" />
+    <Content Include="RecipientHome.aspx" />
+    <Content Include="RecipientPostFeedBack.aspx" />
+    <Content Include="RecipientRegistration.aspx" />
+    <Content Include="RecipientViewUploadFile.aspx" />
+    <Content Include="SMSDLL\SMS_LIB.dll" />
+    <Content Include="UploadDocument.aspx" />
+    <Content Include="ViewDonateAmount.aspx" />
+    <Content Include="ViewDonorWallet.aspx" />
+    <Content Include="ViewRecipientWallet.aspx" />
+    <Content Include="ViewScholarshipAmount.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddDonorWallet.aspx.cs">
+      <DependentUpon>AddDonorWallet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddDonorWallet.aspx.designer.cs">
+      <DependentUpon>AddDonorWallet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddRecipientEducation.aspx.cs">
+      <DependentUpon>AddRecipientEducation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddRecipientEducation.aspx.designer.cs">
+      <DependentUpon>AddRecipientEducation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddScholarshipAmount.aspx.cs">
+      <DependentUpon>AddScholarshipAmount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddScholarshipAmount.aspx.designer.cs">
+      <DependentUpon>AddScholarshipAmount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViewNGOScholarship.aspx.cs">
+      <DependentUpon>AdminViewNGOScholarship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminViewNGOScholarship.aspx.designer.cs">
+      <DependentUpon>AdminViewNGOScholarship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AMHome.aspx.cs">
+      <DependentUpon>AMHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMHome.aspx.designer.cs">
+      <DependentUpon>AMHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationManager.Master.cs">
+      <DependentUpon>ApplicationManager.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationManager.Master.designer.cs">
+      <DependentUpon>ApplicationManager.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ApplyScholarship.aspx.cs">
+      <DependentUpon>ApplyScholarship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplyScholarship.aspx.designer.cs">
+      <DependentUpon>ApplyScholarship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApproveNGORegistration.aspx.cs">
+      <DependentUpon>ApproveNGORegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApproveNGORegistration.aspx.designer.cs">
+      <DependentUpon>ApproveNGORegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApproveScholarship.aspx.cs">
+      <DependentUpon>ApproveScholarship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApproveScholarship.aspx.designer.cs">
+      <DependentUpon>ApproveScholarship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Donor.Master.cs">
+      <DependentUpon>Donor.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Donor.Master.designer.cs">
+      <DependentUpon>Donor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DonorHome.aspx.cs">
+      <DependentUpon>DonorHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DonorHome.aspx.designer.cs">
+      <DependentUpon>DonorHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DonorPayNGO.aspx.cs">
+      <DependentUpon>DonorPayNGO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DonorPayNGO.aspx.designer.cs">
+      <DependentUpon>DonorPayNGO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DonorRegistration.aspx.cs">
+      <DependentUpon>DonorRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DonorRegistration.aspx.designer.cs">
+      <DependentUpon>DonorRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DonorViewScholarShip.aspx.cs">
+      <DependentUpon>DonorViewScholarShip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DonorViewScholarShip.aspx.designer.cs">
+      <DependentUpon>DonorViewScholarShip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GovtPayNGO.aspx.cs">
+      <DependentUpon>GovtPayNGO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GovtPayNGO.aspx.designer.cs">
+      <DependentUpon>GovtPayNGO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyConnection.cs" />
+    <Compile Include="NGO.Master.cs">
+      <DependentUpon>NGO.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NGO.Master.designer.cs">
+      <DependentUpon>NGO.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NGOHome.aspx.cs">
+      <DependentUpon>NGOHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NGOHome.aspx.designer.cs">
+      <DependentUpon>NGOHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NGORegistration.aspx.cs">
+      <DependentUpon>NGORegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NGORegistration.aspx.designer.cs">
+      <DependentUpon>NGORegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NGOScholarship.aspx.cs">
+      <DependentUpon>NGOScholarship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NGOScholarship.aspx.designer.cs">
+      <DependentUpon>NGOScholarship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NGOViewRScholarship.aspx.cs">
+      <DependentUpon>NGOViewRScholarship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NGOViewRScholarship.aspx.designer.cs">
+      <DependentUpon>NGOViewRScholarship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recipient.Master.cs">
+      <DependentUpon>Recipient.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recipient.Master.designer.cs">
+      <DependentUpon>Recipient.Master</DependentUpon>
+    </Compile>
+    <Compile Include="RecipientHome.aspx.cs">
+      <DependentUpon>RecipientHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipientHome.aspx.designer.cs">
+      <DependentUpon>RecipientHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipientPostFeedBack.aspx.cs">
+      <DependentUpon>RecipientPostFeedBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipientPostFeedBack.aspx.designer.cs">
+      <DependentUpon>RecipientPostFeedBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipientRegistration.aspx.cs">
+      <DependentUpon>RecipientRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipientRegistration.aspx.designer.cs">
+      <DependentUpon>RecipientRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipientViewUploadFile.aspx.cs">
+      <DependentUpon>RecipientViewUploadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipientViewUploadFile.aspx.designer.cs">
+      <DependentUpon>RecipientViewUploadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SymmetricCryptoClass.cs" />
+    <Compile Include="UploadDocument.aspx.cs">
+      <DependentUpon>UploadDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadDocument.aspx.designer.cs">
+      <DependentUpon>UploadDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDonateAmount.aspx.cs">
+      <DependentUpon>ViewDonateAmount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDonateAmount.aspx.designer.cs">
+      <DependentUpon>ViewDonateAmount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDonorWallet.aspx.cs">
+      <DependentUpon>ViewDonorWallet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDonorWallet.aspx.designer.cs">
+      <DependentUpon>ViewDonorWallet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRecipientWallet.aspx.cs">
+      <DependentUpon>ViewRecipientWallet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewRecipientWallet.aspx.designer.cs">
+      <DependentUpon>ViewRecipientWallet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewScholarshipAmount.aspx.cs">
+      <DependentUpon>ViewScholarshipAmount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewScholarshipAmount.aspx.designer.cs">
+      <DependentUpon>ViewScholarshipAmount.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationManager.Master" />
+    <Content Include="Donor.Master" />
+    <None Include="fonts\fontawesome-webfont.eot" />
+    <None Include="fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\fontawesome-webfont.woff2" />
+    <None Include="fonts\FontAwesome.otf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="images\.DS_Store" />
+    <None Include="images\Thumbs.db" />
+    <Content Include="NGO.Master" />
+    <Content Include="Recipient.Master" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63515</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
